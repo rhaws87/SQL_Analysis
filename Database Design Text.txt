@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Modify this code to update the DB schema diagram.
 # To reset the sample schema, replace everything with
 # two dots ('..' - without quotes).
@@ -42,4 +43,50 @@ birth_date DATE
 first_name varchar
 last_name varcahr
 gender CHAR
+=======
+# Modify this code to update the DB schema diagram.
+# To reset the sample schema, replace everything with
+# two dots ('..' - without quotes).
+
+Salaries
+-
+emp_no PK int FK >- Employees.emp_no
+salary int
+from_date DATE
+to_date DATE
+
+Titles
+-
+emp_no PK int FK >- Employees.emp_no
+title varchar
+from_date DATE
+to_date DATE
+
+Departments
+-
+Dept_no PK int
+Dept_name int FK -< Dept_Emp.Dept_no
+
+Dept_Emp
+----
+emp_no PK int
+Dept_no int 
+from_date DATE
+to_date DATE
+
+Dept_Mgr 
+------------
+emp_no PK int FK >- Dept_Emp.emp_no
+Dept_no int FK >- Departments.Dept_no
+from_date DATE
+to_date DATE
+
+Employees 
+----
+emp_no PK int FK -< Dept_Emp.emp_no  
+birth_date DATE
+first_name varchar
+last_name varcahr
+gender CHAR
+>>>>>>> e72a88ec089b0f3d751b9e8a5c73d7c037435aa9
 hire_date DATE
